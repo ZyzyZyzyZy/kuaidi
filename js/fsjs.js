@@ -3,7 +3,11 @@
  */
 window.onload=
     function(){
-        //var a=document.getElementById("a");
-        //var neirong=localStorage.getItem("neirong");
-        //a.innerHTML=neirong;
+        var a=document.getElementById("anzhuo");
+        var p=document.getElementById("pingguo");
+        var neirong=localStorage.getItem("neirong");
+        var fora="sms:18149763032?body="+neirong;
+        var forp="sms:18149763032&body="+neirong;
+        a.setAttribute("href",fora);
+        p.setAttribute("href",forp);
     }
