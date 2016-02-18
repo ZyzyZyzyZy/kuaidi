@@ -78,7 +78,7 @@ function f4(){
     var name=localStorage.getItem("name");
     var neirong="用户:"+name+"   "+"下单时间:"+mydate.toLocaleString()+"  "+"取货密码"+localStorage.getItem("quhuoma")+"   "
         +"柜台号:  "+localStorage.getItem("guihao")+"   "+"备注:"+localStorage.getItem("beizhu")+"       注:订单将以短信方式发送至订单处理中心,实际发送内容与订单文字不同";
-    var neirongbaocun=localStorage.getItem("name")+";"+localStorage.getItem("dongxi")+";"+localStorage.getItem("louhao")+";"+
+    var neirongbaocun="xg;"+localStorage.getItem("name")+";"+localStorage.getItem("dongxi")+";"+localStorage.getItem("louhao")+";"+
         localStorage.getItem("quhuoma")+";"+localStorage.getItem("guihao")+";"+localStorage.getItem("beizhu");
     y4.innerHTML=neirong;
     localStorage.setItem("neirong",neirongbaocun);
