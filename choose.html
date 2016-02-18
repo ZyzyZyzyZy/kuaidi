@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <title>上政快递服务</title>
+    <style>
+        .anniu{
+            margin: 10px 10px 10px 10px;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+       <h3>您在河西还是河东?<small id="dongxi" style="color:red; font-size: 20px"></small></h3>
+       <button type="button" class="btn btn-info btn-lg" onclick="x1('河西')">河西</button>
+       <button type="button" class="btn btn-info btn-lg" onclick="x1('河东')">河东</button>
+
+       <HR style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="80%" color=#987cb9 SIZE=1>
+       <h3>河西<small id="hexi" style="color: red;font-size: 20px"></small></h3>
+       <div>
+       <button id="bx1" type="button" class="btn btn-default anniu" onclick="x2('1')">河西1号楼</button>
+       <button id="bx2" type="button" class="btn btn-default anniu" onclick="x2('2')">河西1号楼</button>
+       <button id="bx3" type="button" class="btn btn-default anniu" onclick="x2('3')">河西3号楼</button>
+       <button id="bx4" type="button" class="btn btn-default anniu" onclick="x2('4')">河西4号楼</button><br>
+       <button id="bx5" type="button" class="btn btn-default anniu" onclick="x2('5')">河西5号楼</button>
+       <button id="bx6" type="button" class="btn btn-default anniu" onclick="x2('6')">河西6号楼</button>
+       <button id="bx7" type="button" class="btn btn-default anniu" onclick="x2('7')">河西7号楼</button>
+       <button id="bx8" type="button" class="btn btn-default anniu" onclick="x2('8')">河西8号楼</button>
+       </div>
+       <HR style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="80%" color=#987cb9 SIZE=1>
+       <div>
+           <h3>河东<small id="hedong" style="color: red;font-size: 20px"></small></h3>
+
+           <button id="bd7" type="button" class="btn btn-default anniu" onclick="x3('7')">河东 7  号楼</button>
+           <button id="bd8" type="button" class="btn btn-default anniu" onclick="x3('8')">河东 8  号楼</button>
+           <button id="bd9" type="button" class="btn btn-default anniu" onclick="x3('9')">河东 9  号楼</button>
+           <button id="bd10" type="button" class="btn btn-default anniu" onclick="x3('10')">河东10号楼</button>
+           <button id="bd11" type="button" class="btn btn-default anniu" onclick="x3('11')">河东11号楼</button><br>
+           <button id="bd12" type="button" class="btn btn-default anniu" onclick="x3('12')">河东12号楼</button>
+           <button id="bd13" type="button" class="btn btn-default anniu" onclick="x3('13')">河东13号楼</button>
+           <button id="bd14" type="button" class="btn btn-default anniu" onclick="x32('14')">河东14号楼</button>
+           <button id="bd15" type="button" class="btn btn-default anniu" onclick="x3('15')">河东15号楼</button>
+           <button id="bd16" type="button" class="btn btn-default anniu" onclick="x3('16')">河东16号楼</button><br>
+           <button id="bd17" type="button" class="btn btn-default anniu" onclick="x3('17')">河东17号楼</button>
+           <button id="bd18" type="button" class="btn btn-default anniu" onclick="x3('18')">河东18号楼</button>
+           <button type="button" class="btn btn-default anniu" onclick="x3('19')">河东19号楼</button>
+           <button type="button" class="btn btn-default anniu" onclick="x3('20')">河东20号楼</button>
+           <button type="button" class="btn btn-default anniu" onclick="x3('21')">河东21号楼</button><br>
+           <button type="button" class="btn btn-default anniu" onclick="x3('22')">河东22号楼</button>
+           <button type="button" class="btn btn-default anniu" onclick="x3('23')">河东23号楼</button>
+           <button type="button" class="btn btn-default anniu" onclick="x3('24')">河东24号楼</button>
+           <button type="button" class="btn btn-default anniu" onclick="x3('25')">河东25号楼</button>
+           <button type="button" class="btn btn-default anniu" onclick="x3('26')">河东26号楼</button>
+       </div>
+
+   </div>
+
+<script>
+function x1(v1){
+    var weizhi1=document.getElementById("dongxi");
+    var vv=v1;
+    weizhi1.innerHTML=vv;
+    localStorage.setItem("dongxi",vv)
+}
+function x2(v2) {
+    var weizhi2 = document.getElementById("hexi");
+    var ww = v2;
+    weizhi2.innerHTML = "河西" + ww + "号楼";
+}
+function x3(v3){
+    var weizhi3=document.getElementById("hedong");
+    var ee=v3;
+    weizhi3.innerHTML="河东"+ee+"号楼";
+}
+</script>
+</body>
+</html>
