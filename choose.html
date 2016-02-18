@@ -42,15 +42,22 @@
        </div>
        <br>
        <br>
-
-       <button id="qr" type="button"  class="btn btn-primary btn-lg btn-block" onclick="tiaozhuan()">
+       <button id="sc" type="button"  class="btn btn-primary btn-lg btn-block" onclick="tiaozhuan('1')">
+          上传你的校园卡
+       </button>
+       <button id="qr" type="button"  class="btn btn-primary btn-lg btn-block" onclick="tiaozhuan('2')">
            确认
        </button>
 
    </div>
 <script>
-    function  tiaozhuan(){
-        window.location.href="index.html";
+    function  tiaozhuan(weizhi){
+        if(weizhi=="1") {
+            window.location.href = "tietu-master/index.html";
+        }
+        if(weizhi=="2") {
+            window.location.href = "index.html";
+        }
     }
 </script>
 </body>

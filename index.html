@@ -11,6 +11,7 @@
     <title>上政快递服务</title>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/forindex.js"></script>
     <link rel="stylesheet" href="css/moban/main.css">
     <noscript>&lt;link rel="stylesheet" href=css/moban/noscript.css" /&gt;</noscript>
 </head>
@@ -32,10 +33,16 @@
             <button type="button"  class="btn btn-warning btn-lg">
                 <span style="color: white" class="glyphicon glyphicon-info-sign"></span> 服务详情
             </button><br>
-            <button style="margin-top: 10px" type="button" class="btn btn-success btn-lg btn-block">
-                <span style="color: white" class="glyphicon glyphicon-plus"></span> 下单
+            <div class="btn-group btn-block">
+            <button style="margin-top: 10px" type="button" class="btn btn-success btn-lg btn-block"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span style="color: white" class="glyphicon glyphicon-plus"></span> 下单<span class="caret"></span>
             </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">箱柜取货</a></li>
+                <li><a href="#">货架取货</a></li>
 
+            </ul>
+                </div>
         </footer>
     </section>
 

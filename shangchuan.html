@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <title>上政快递服务</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sc/jquery.min.js"></script>
+    <script src="js/sc/jquery.form.js"></script>
+    <script src="js/sc/embed.js"></script>
+</head>
+<body>
+<div class="container">
+<h3>上传您的学生证</h3>
+    <form enctype="multipart/form-data" method="post" action="http://up.tietuku.com/" id = "upform">
+        <input name="Token" id = "token" value="3102f8f986996840685429c9d215b9726fc2859a:QmQ1MlJIdTdsSVNKTkQ3NzdlZ1BrVzFfano4PQ==:eyJkZWFkbGluZSI6MTQ1NTc4ODIwNywiYWN0aW9uIjoiZ2V0IiwidWlkIjoiNTU3MDA4IiwiYWlkIjoiMTIwMDkxNCIsImZyb20iOiJmaWxlIn0=" type="hidden">
+        <input type="file" name="file" id = "file" class = "up-file" style="font-size: 10px;margin-top: 10px">
+        <input onclick="dianji()" type="submit" id = 'btn' value = "开始上传" style="margin-top: 10px" class = "btn btn-info btn-block">
+        <img style="margin-top: 20px" class="img-responsive center-block" src="" id="imgs">
+    </form>
+</div>
+</body>
+</html>
