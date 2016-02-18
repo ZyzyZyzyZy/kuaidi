@@ -25,6 +25,8 @@ window.onload=
             var y8=document.getElementById("b2");
             var y9=document.getElementById("line1");
             var y10=document.getElementById("line2");
+            var y11=document.getElementById("sc");
+            y11.style.visibility="hidden";
             y1.style.visibility="hidden";
             y2.style.visibility="hidden";
             y3.style.visibility="hidden";
@@ -87,6 +89,7 @@ function jinyong(i){
     var y2=document.getElementById("p1");
     var y3=document.getElementById("p2");
     var y5=document.getElementById("qr");
+    var y11=document.getElementById("sc");
     var y9=document.getElementById("line2");
     y1.style.visibility="visible";
     y2.style.visibility="visible";
@@ -94,6 +97,7 @@ function jinyong(i){
     y5.style.visibility="visible";
     id.style.visibility="visible";
     y9.style.visibility="visible";
+    y11.style.visibility="visible";
 
     if(i=="河西"){
         y2.innerHTML="河西";

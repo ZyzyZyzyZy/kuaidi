@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <title>上政快递服务</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/forquhuoxg.js"></script>
+</head>
+<body style="background-image: url('img/bg.jpg')">
+<div class="container">
+<h3>请输入取货密码</h3>
+    <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">取货码</button>
+      </span>
+        <input onchange="f1()" id="quhuoma" type="text" class="form-control" placeholder="">
+    </div><!-- /input-group -->
+    <div style="margin-top: 10px">
+    <p id="p1" style="display: inline-block;font-weight: bold;font-size: 18px;">第</p>
+    <select  id="gh" class="selected" onchange="f2()">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+
+    </select>
+    <p id="p2" style="display: inline-block;font-weight: bold;font-size: 18px;">号柜</p>
+    </div>
+    <div>
+        <h3 id="h1">备注</h3>
+        <div class="input-group">
+            <input onchange="f3()" id="bz" type="text" class="form-control" placeholder="没有可不填">
+      <span class="input-group-btn">
+        <button id="b1" class="btn btn-default" type="button">备注</button>
+      </span>
+
+        </div><!-- /input-group -->
+    </div>
+    <button onclick="f4()" id="scdd" class="btn btn-success btn-block" type="button" style="margin-top: 15px">生成订单</button>
+    <p id="xsdd" style="margin-top: 15px;font-size: 15px" class="bg-success"  ></p>
+    <button onclick="f5()" id="fsdd" class="btn btn-success btn-block" type="button" style="margin-top: 15px">发送订单
+       </button>
+
+</div>
+</body>
+</html>
