@@ -14,36 +14,44 @@
     <style>
         .selected{
             font-size: 40px !important;
-            margin-left: 30px;
-            filter: false;
+            margin-left: 5px;
+            margin-right: 5px;
         }
     </style>
 </head>
 <body>
    <div class="container">
-       <h3>您在河西还是河东?<small id="dongxi" style="color:red; font-size: 20px"></small></h3>
+       <h3>请输入您的姓名</h3>
+       <div class="input-group input-group-lg">
+           <span class="input-group-addon" id="sizing-addon1">@</span>
+           <input id="nameinput" type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1" onchange="namechange()">
+       </div>
+       <HR id="line1" style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="80%" color=#987cb9 SIZE=1>
+       <h3 id="h2">您在河西还是河东?<small id="dongxi" style="color:red; font-size: 20px"></small></h3>
        <button id="b1" type="button" class="btn btn-default btn-lg" onclick="x1('河西');jihuo('1')">河西</button>
        <button id="b2" type="button" class="btn btn-default btn-lg" onclick="x1('河东');jihuo('2')">河东</button>
-       <HR style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="80%" color=#987cb9 SIZE=1>
+       <HR id="line2" style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="80%" color=#987cb9 SIZE=1>
        <div>
-       <p style="font-size: 20px;display:inline-block;">请选择楼号</p>
-       <!--<select id="lh" class="selected" onchange="xuanze()">-->
-           <!--&lt;!&ndash;<option></option>&ndash;&gt;-->
-       <!--</select>-->
-           </div>
-   </div>
-   <div class="btn-group">
-       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           Action <span class="caret"></span>
-       </button>
-       <ul class="dropdown-menu">
-           <li><a href="#">Action</a></li>
-           <li><a href="#">Another action</a></li>
-           <li><a href="#">Something else here</a></li>
-           <li role="separator" class="divider"></li>
-           <li><a href="#">Separated link</a></li>
-       </ul>
-   </div>
+       <h3 id="h1">请选择楼号</h3>
+       <p id="p1" style="display: inline-block;font-size: 20px;"></p>
+       <select id="lh" class="selected" onchange="xuanze()">
+           <!--<option></option>-->
+       </select>
+           <p id="p2" style="display: inline-block;font-size: 20px">号楼</p>
 
+       </div>
+       <br>
+       <br>
+
+       <button id="qr" type="button"  class="btn btn-primary btn-lg btn-block" onclick="tiaozhuan()">
+           确认
+       </button>
+
+   </div>
+<script>
+    function  tiaozhuan(){
+        window.location.href="index.html";
+    }
+</script>
 </body>
 </html>

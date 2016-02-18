@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <title>上政快递服务</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/moban/main.css">
+    <noscript>&lt;link rel="stylesheet" href=css/moban/noscript.css" /&gt;</noscript>
+</head>
+<body>
+<div id="wrapper">
+
+    <!-- Main -->
+    <section id="main">
+        <header>
+            <span class="avatar"><img src="img/logo.jpg" alt=""></span>
+            <h1>上政快递服务</h1>
+            <p>你看剧,打游戏,你的快递我来取</p>
+        </header>
+
+        <footer>
+            <button style="color: white" type="button" class="btn btn-primary btn-lg" onclick="tiaozhuan('1')">
+                <span class="glyphicon glyphicon-user"></span>我的信息
+            </button>
+            <button type="button"  class="btn btn-warning btn-lg">
+                <span style="color: white" class="glyphicon glyphicon-info-sign"></span> 服务详情
+            </button><br>
+            <button style="margin-top: 10px" type="button" class="btn btn-success btn-lg btn-block">
+                <span style="color: white" class="glyphicon glyphicon-plus"></span> 下单
+            </button>
+
+        </footer>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="copyright">
+            <li>© Jane Doe</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+    </footer>
+
+</div>
+<script>
+
+    if ('addEventListener' in window) {
+        window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+        document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+    }
+function tiaozhuan(weizhi){
+    if(weizhi=="1"){
+        window.location.href="choose.html";
+    }
+}
+</script>
+</body>
+</html>
