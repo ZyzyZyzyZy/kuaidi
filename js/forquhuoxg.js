@@ -36,6 +36,13 @@ function f1(){
     y7.style.visibility="visible";
     y8.style.visibility="visible";
     y9.style.visibility="visible";
+
+}
+
+function f2(){
+       var l2=document.getElementById("gh");
+       var gh=l2.value;
+       localStorage.setItem("guihao",gh);
     var y1=document.getElementById("h1");
     var y2=document.getElementById("bz");
     var y3=document.getElementById("scdd");
@@ -46,22 +53,6 @@ function f1(){
     y3.style.visibility="visible";
     //y4.style.visibility="visible";
     y6.style.visibility="visible";
-}
-
-function f2(){
-       var l2=document.getElementById("gh");
-       var gh=l2.value;
-       localStorage.setItem("guihao",gh);
-    //var y1=document.getElementById("h1");
-    //var y2=document.getElementById("bz");
-    //var y3=document.getElementById("scdd");
-    ////var y4=document.getElementById("xsdd");
-    //var y6=document.getElementById("b1");
-    //y1.style.visibility="visible";
-    //y2.style.visibility="visible";
-    //y3.style.visibility="visible";
-    ////y4.style.visibility="visible";
-    //y6.style.visibility="visible";
     //var mydate=new Date();
     //var name=localStorage.getItem("name");
     //var neirong="用户:"+name+"   "+"下单时间:"+mydate.toLocaleString()+"  "+"取货密码"+localStorage.getItem("quhuoma")+"   "

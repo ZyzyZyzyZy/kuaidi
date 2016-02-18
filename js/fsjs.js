@@ -3,7 +3,7 @@
  */
 window.onload=
     function(){
-        var a=document.getElementById("a");
-        var neirong=localStorage.getItem("neirong");
-        a.innerHTML=neirong;
+        //var a=document.getElementById("a");
+        //var neirong=localStorage.getItem("neirong");
+        //a.innerHTML=neirong;
     }
