@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ae63442e-6317-45b5-88a0-e8ce429b08bf" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fsdingdan1.html" afterPath="$PROJECT_DIR$/fsdingdan1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quhuoxg.html" afterPath="$PROJECT_DIR$/quhuoxg.html" />
     </list>
     <ignored path="kuaidi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -87,8 +86,8 @@
       <file leaf-file-name="fsdingdan1.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fsdingdan1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45382166">
-              <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.2388535">
+              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -665,8 +664,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fsdingdan1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45382166">
-          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.2388535">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
           <folding />
         </state>
       </provider>
