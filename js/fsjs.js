@@ -12,7 +12,9 @@ window.onload=
 
                 var fora1=n1+"?body="+neirong;
                 var forp1=n1+"&body="+neirong;
-                a.setAttribute("href",fora1);
+            //alert(fora1);
+
+                a.setAttribute("href","sms:18149763032?body=ddd");
                 p.setAttribute("href",forp1);
 
 
