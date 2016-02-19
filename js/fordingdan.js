@@ -212,10 +212,10 @@ function fanhui(){
 function fasongxinxi(d){
     var shyphone2=localStorage.getItem("shyphone");
     var userphone=localStorage.getItem("userphone");
-    var fsnr="取消订单通知    单号为:"+d+"的订单被"+userphone+"取消";
+    var fsnr="取消订单通知,单号为:"+d+"的订单被"+userphone+"取消";
     localStorage.setItem("neirong",fsnr);
 
-    Bmob.Sms.requestSms({"mobilePhoneNumber":"18149763032","content": "111"} ).then(function(obj) {
+    Bmob.Sms.requestSms({"mobilePhoneNumber":shyphone2,"content":fsnr} ).then(function(obj) {
         alert("订单取消成功"); //
         window.location.href="dingdan.html";
     }, function(err){
