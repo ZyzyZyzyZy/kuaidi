@@ -158,10 +158,10 @@ function  quxiao(){
                         object.set("queren", "q");
                         object.save(null, {
                             success: function(objectUpdate) {
-                                alert("create object success, object score:"+objectUpdate.get("score"));
                                 var shyphone2=localStorage.getItem("shyphone");
                                 var userphone=localStorage.getItem("userphone");
                                 var fsnr="取消订单通知    单号为:"+danhao2+"的订单被"+userphone+"取消";
+                                localStorage.setItem("neirong",fsnr);
 
 
                                 Bmob.Sms.requestSms({"mobilePhoneNumber":shyphone2,"content": fsnr} ).then(function(obj) {
