@@ -158,21 +158,22 @@ function  quxiao(){
                         object.set("queren", "q");
                         object.save(null, {
                             success: function(objectUpdate) {
-                                //alert("create object success, object score:"+objectUpdate.get("score"));
-                                //var shyphone2=localStorage.getItem("shyphone");
-                                //var userphone=localStorage.getItem("userphone");
-                                //var fsnr="取消订单通知    单号为:"+danhao2+"的订单被"+userphone+"取消";
-                                //
-                                //
-                                //Bmob.Sms.requestSms({"mobilePhoneNumber":shyphone2,"content": fsnr} ).then(function(obj) {
-                                //    alert("订单取消成功"); //
-                                //    window.location.href="dingdan.html";
-                                //}, function(err){
-                                //    window.location.href="dingdan.html";
-                                //    alert("订单取消未成功通知送货员,请联系客服 qq:894403712");
-                                //});
+                                alert("create object success, object score:"+objectUpdate.get("score"));
+                                var shyphone2=localStorage.getItem("shyphone");
+                                var userphone=localStorage.getItem("userphone");
+                                var fsnr="取消订单通知    单号为:"+danhao2+"的订单被"+userphone+"取消";
 
-                            fasongxinxi(danhao2);
+
+                                Bmob.Sms.requestSms({"mobilePhoneNumber":shyphone2,"content": fsnr} ).then(function(obj) {
+                                    alert("订单取消成功"); //
+                                    window.location.href="dingdan.html";
+                                }, function(err){
+                                    localStorage.setItem("fsmoshi","quxiao");
+                                    alert("订单取消未成功通知送货员,即将改为手动发送");
+                                    window.location.href="fsdingdan1.html";
+                                });
+
+                            //fasongxinxi(danhao2);
 
 
 
