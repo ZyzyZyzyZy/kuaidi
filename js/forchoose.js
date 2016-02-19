@@ -41,6 +41,8 @@ window.onload=
         }else{
             var nameinput=document.getElementById("nameinput");
             nameinput.value=name;
+            var ph=document.getElementById("numberinput");
+            ph.value=localStorage.getItem("userphone");
             if(dongxi=="河西"){
                 jihuo("1");
                 jinyong("河西");
@@ -131,10 +133,18 @@ function xuanze(){
     var id=document.getElementById("lh");
     var neirong=id.value;
     localStorage.setItem("louhao",neirong);
+    songhuo();
+
 }
 function namechange(){
     var name=document.getElementById("nameinput").value;
     localStorage.setItem("name",name);
+
+}
+
+function phonechange(){
+    var phone=document.getElementById("numberinput").value;
+    localStorage.setItem("userphone",phone);
     var y6=document.getElementById("h2");
     var y7=document.getElementById("b1");
     var y8=document.getElementById("b2");

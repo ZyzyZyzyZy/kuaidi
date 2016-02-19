@@ -11,7 +11,10 @@
     <title>上政快递服务</title>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/songhuoyuan.js"></script>
     <script src="js/forindex.js"></script>
+    <script src="js/bmob/bmob.js"></script>
+    <script src="js/bmob/bmob-min.js"></script>
     <link rel="stylesheet" href="css/moban/main.css">
     <noscript>&lt;link rel="stylesheet" href=css/moban/noscript.css" /&gt;</noscript>
 </head>
@@ -33,24 +36,28 @@
             <button type="button"  class="btn btn-warning btn-lg">
                 <span style="color: white" class="glyphicon glyphicon-info-sign"></span> 服务详情
             </button><br>
+
             <div class="btn-group btn-block">
+
             <button style="margin-top: 10px" type="button" class="btn btn-success btn-lg btn-block"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span style="color: white" class="glyphicon glyphicon-plus"></span> 下单<span class="caret"></span>
+                <span style="color: white" class="glyphicon glyphicon-plus"></span>订单<span class="caret"></span>
             </button>
             <ul class="dropdown-menu">
-                <li><a href="#" onclick="check('1')">箱柜取货</a></li>
-                <li><a href="#" onclick="check2()">货架取货</a></li>
+                <li><a href="#" onclick="check('1')">下单:箱柜取货</a></li>
+                <li><a href="#" onclick="check2()">下单:货架取货</a></li>
+                <li><a href="#" onclick="check3()">查看:我的订单</a></li>
 
             </ul>
-                </div>
+
+            </div>
         </footer>
     </section>
 
     <!-- Footer -->
     <footer id="footer">
         <ul class="copyright">
-            <li>© Jane Doe</li>
-            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            <li style="color: black">© ZY</li>
+            <li style="color: black">商务合作及客服联系方式 qq:894403712</li>
         </ul>
     </footer>
 

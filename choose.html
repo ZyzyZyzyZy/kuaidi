@@ -9,6 +9,8 @@
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <title>上政快递服务</title>
     <script src="js/forchoose.js"></script>
+    <script src="js/songhuoyuan.js"></script>
+
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <style>
@@ -21,10 +23,17 @@
 </head>
 <body  style="background-image: url('img/bg.jpg')">
    <div class="container">
-       <h3>请输入您的姓名</h3>
+       <h3>请输入您的信息</h3>
        <div class="input-group input-group-lg">
-           <span class="input-group-addon" id="sizing-addon1">@</span>
-           <input id="nameinput" type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1" onchange="namechange()">
+           <span class="input-group-addon" id="sizing-addon1">N</span>
+           <input id="nameinput" type="text" class="form-control" placeholder="你的姓名" aria-describedby="sizing-addon1" onchange="namechange()">
+           <!--<input id="numberinput" type="text" class="form-control" placeholder="你的手机号" aria-describedby="sizing-addon1" onchange="phonechange()">-->
+
+       </div>
+       <div  style="margin-top: 5px" class="input-group input-group-lg">
+           <input id="numberinput" type="text" class="form-control" placeholder="你的手机号" aria-describedby="sizing-addon1" onchange="phonechange()">
+           <span class="input-group-addon" id="sizing-addon1">T</span>
+
        </div>
        <HR id="line1" style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="80%" color=#987cb9 SIZE=1>
        <h3 id="h2">您在河西还是河东?<small id="dongxi" style="color:red; font-size: 20px"></small></h3>
@@ -45,7 +54,7 @@
        <button id="sc" type="button"  class="btn btn-primary btn-lg btn-block" onclick="tiaozhuan('1')">
           上传你的校园卡
        </button>
-       <button id="qr" type="button"  class="btn btn-primary btn-lg btn-block" onclick="tiaozhuan('2')">
+       <button  id="qr" type="button"  class="btn btn-primary btn-lg btn-block" onclick="tiaozhuan('2')">
            确认
        </button>
 
@@ -56,7 +65,9 @@
             window.location.href = "shangchuan.html";
         }
         if(weizhi=="2") {
+            songhuo();
             window.location.href = "index.html";
+
         }
     }
 </script>
