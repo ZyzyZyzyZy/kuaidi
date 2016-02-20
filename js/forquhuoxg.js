@@ -115,7 +115,9 @@ function f4(){
 function nr(){
     var mydate=new Date();
     var y4=document.getElementById("xsdd");
-
+    var l2=document.getElementById("gh");
+    var gh=l2.value;
+    localStorage.setItem("guihao",gh);
     var name=localStorage.getItem("name");
     var userphone=localStorage.getItem("userphone");
     //var neirong="单号:"+localStorage.getItem("danhao")+"用户:"+name+"   "+"下单时间:"+mydate.toLocaleString()+"  "+"取货密码"+localStorage.getItem("quhuoma")+"   "

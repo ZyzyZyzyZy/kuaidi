@@ -21,7 +21,7 @@ function songhuo(){
     }
     if(dongxi=="河东"){
         if(louhao<21){
-            shy="董靖";
+            shy="董婧";
             shyphone="13046625806";
             shyid="DongJing"
         }else{

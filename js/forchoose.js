@@ -10,6 +10,7 @@ window.onload=
         //y3.style.visibility="hidden";
         //y4.style.visibility="hidden";
         //y5.style.visibility="hidden";
+        Bmob.initialize("250ee02b502803ee9c571ed74f36a5de", "bd1b1af6ca8ab8bf686885d2384c3349");
         try{
         var louhao=localStorage.getItem("louhao");
         var dongxi=localStorage.getItem("dongxi");
@@ -134,6 +135,7 @@ function xuanze(){
     var neirong=id.value;
     localStorage.setItem("louhao",neirong);
     songhuo();
+    tongji();
 
 }
 function namechange(){
@@ -153,4 +155,20 @@ function phonechange(){
     y8.style.visibility="visible";
     y7.style.visibility="visible";
     y6.style.visibility="visible";
+}
+
+function tongji(){
+    var TJ = Bmob.Object.extend("users");
+    var tj = new TJ();
+    tj.set("name", localStorage.getItem("name"));
+    tj.set("phone",localStorage.getItem("userphone"));
+    tj.set("location",localStorage.getItem("dongxi")+localStorage.getItem("louhao")+"号楼");
+    tj.save(null, {
+        success: function(tj) {
+
+        },
+        error: function(gameScore, error) {
+
+        }
+    });
 }
