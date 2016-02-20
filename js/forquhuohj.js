@@ -189,7 +189,7 @@ function f4(){
             window.location.href="index.html";
         }, function(err){
             localStorage.setItem("fsmoshi","hj");
-            alert("下单成功,但未成功发送通知短信,即将改为手动发送");
+            alert("下单成功,但由于当前用户过多,未成功发送通知短信,即将改为手动发送");
             window.location.href="fsdingdan1.html";
         });
 
