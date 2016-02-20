@@ -3,6 +3,9 @@
  */
 window.onload=
     function () {
+
+
+        //localStorage.clear();
         Bmob.initialize("250ee02b502803ee9c571ed74f36a5de", "bd1b1af6ca8ab8bf686885d2384c3349");
 
 
