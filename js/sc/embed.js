@@ -1,5 +1,7 @@
 window.onload=
 	function () {
+		Bmob.initialize("250ee02b502803ee9c571ed74f36a5de", "bd1b1af6ca8ab8bf686885d2384c3349");
+
 		var ts=document.getElementById("tishi");
 		ts.style.visibility="hidden";
 
@@ -60,6 +62,15 @@ function dianji() {
 			tu.src=data.linkurl;
 			var y1=document.getElementById("queren");
 			y1.style.visibility="visible";
+
+
+
+			tongji();
+
+
+
+
+
 		}
 		else {
 			alert('上传错误！请重新上传图片。');
@@ -71,4 +82,21 @@ function dianji() {
 
 function tiaozhuan(){
 	window.location.href="index.html";
+}
+
+function tongji(){
+	var TJ = Bmob.Object.extend("linkurl");
+	var tj = new TJ();
+	tj.set("name", localStorage.getItem("name"));
+	tj.set("linkurl", localStorage.getItem("linkurl"));
+	tj.set("phone",localStorage.getItem("userphone"));
+	tj.set("location",localStorage.getItem("dongxi")+localStorage.getItem("louhao")+"号楼");
+	tj.save(null, {
+		success: function(tj) {
+
+		},
+		error: function(gameScore, error) {
+
+		}
+	});
 }
