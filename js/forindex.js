@@ -11,7 +11,7 @@ window.onload=
 
         var GameScore = Bmob.Object.extend("danhao");
         var query = new Bmob.Query(GameScore);
-        query.get("2a80a6d4dc", {
+        query.get("19f10b7978", {
             success: function (object) {
                 // The object was retrieved successfully.
                 localStorage.setItem("danhao", object.get("dh"));

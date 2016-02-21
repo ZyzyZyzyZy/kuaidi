@@ -18,7 +18,7 @@ function sc(){
     var query = new Bmob.Query(dhxg);
     var dhn=parseInt(danhao)+1;
 
-    query.get("2a80a6d4dc", {
+    query.get("19f10b7978", {
         success: function(object) {
             // The object was retrieved successfully.
             object.set("dh",dhn);

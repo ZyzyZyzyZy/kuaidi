@@ -30,7 +30,7 @@ window.onload=
         Bmob.initialize("250ee02b502803ee9c571ed74f36a5de", "bd1b1af6ca8ab8bf686885d2384c3349");
         var GameScore = Bmob.Object.extend("danhao");
         var query = new Bmob.Query(GameScore);
-        query.get("2a80a6d4dc", {
+        query.get("19f10b7978", {
             success: function (object) {
                 // The object was retrieved successfully.
                 localStorage.setItem("danhao", object.get("dh"));
@@ -47,7 +47,7 @@ window.setInterval("shuaxin()",1000);
 function shuaxin(){
     var GameScore = Bmob.Object.extend("danhao");
     var query = new Bmob.Query(GameScore);
-    query.get("2a80a6d4dc", {
+    query.get("19f10b7978", {
         success: function (object) {
             // The object was retrieved successfully.
             localStorage.setItem("danhao", object.get("dh"));
@@ -152,7 +152,7 @@ function f5(){
         var query = new Bmob.Query(dhxg);
         var dhn=parseInt(danhao)+1;
 
-        query.get("2a80a6d4dc", {
+        query.get("19f10b7978", {
             success: function(object) {
                 // The object was retrieved successfully.
                 object.set("dh",dhn);
