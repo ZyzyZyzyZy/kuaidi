@@ -20,14 +20,25 @@ function songhuo(){
         shyid="ZhangYue"
     }
     if(dongxi=="河东"){
-        if(louhao<21){
-            shy="董婧";
-            shyphone="13046625806";
-            shyid="DongJing"
-        }else{
+        if(louhao==12){
+            shy="张越";
+            shyphone="18149763032";
+            shyid="ZhangYue"
+        }
+        if(louhao<21 && louhao>12){
             shy="秦盼吉";
             shyphone="18217400015";
             shyid="QinPanJi";
+        }
+        if(louhao>21){
+            shy="董婧";
+            shyphone="13046625806";
+            shyid="DongJing";
+        }
+        if(louhao<12){
+            shy="董婧";
+            shyphone="13046625806";
+            shyid="DongJing";
         }
     }
 

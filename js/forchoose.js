@@ -107,7 +107,7 @@ function jinyong(i){
         for(var q= 1;q<id.options.length+1;i++){
             id.options[0]=null;
         }
-        for(var a= 1;a<8;a++)
+        for(var a= 1;a<9;a++)
         {
             var neirong ="    "+a.toString();
             id.options.add(new Option(neirong, a.toString()));
@@ -120,7 +120,7 @@ function jinyong(i){
         for(var q= 1;q<id.options.length+1;i++){
             id.options[0]=null;
         }
-        for(var a= 7;a<27;a++)
+        for(var a= 7;a<28;a++)
         {
             var neirong =a.toString();
             id.options.add(new Option(neirong, a.toString()));
