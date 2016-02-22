@@ -158,7 +158,7 @@ function tongji(){
 		tj.set("location",localStorage.getItem("dongxi")+localStorage.getItem("louhao")+"号楼");
 		tj.save(null, {
 			success: function(tj) {
-				alert("数据同步成功1");
+				//alert("数据同步成功1");
 			},
 			error: function(gameScore, error) {
 
@@ -177,7 +177,7 @@ function shangchuan(){
 			sc.set("linkurl", localStorage.getItem("linkurl"));
 			sc.set("location",localStorage.getItem("dongxi")+localStorage.getItem("louhao")+"号楼");
 			sc.save();
-			alert("数据同步成功2");
+			//alert("数据同步成功2");
 
 			// The object was retrieved successfully.
 		},
