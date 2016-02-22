@@ -38,8 +38,46 @@ window.onload=
             y8.style.visibility="hidden";
             y9.style.visibility="hidden";
             y10.style.visibility="hidden";
+            sessionStorage.setItem("shifoushangchuan","f");
+
 
         }else{
+            var CZ = Bmob.Object.extend("users");
+            var query = new Bmob.Query(CZ);
+// 查询所有数据
+            query.find({
+                success: function(results) {
+
+                    for (var i = 0; i < results.length; i++) {
+                        var object = results[i];
+                        if(results[i].get('name')==localStorage.getItem('name')){
+                            sessionStorage.setItem("shifoushangchuan","t");
+                            var id=results[i].id;
+                            sessionStorage.setItem("scid",id);
+                            break;
+                            //shangchuan();
+                        }else{
+                            sessionStorage.setItem("shifoushangchuan","f");
+                            //var TJ = Bmob.Object.extend("users");
+                            //var tj = new TJ();
+                            //tj.set("name", localStorage.getItem("name"));
+                            //tj.set("phone",localStorage.getItem("userphone"));
+                            //tj.set("location",localStorage.getItem("dongxi")+localStorage.getItem("louhao")+"号楼");
+                            //tj.save(null, {
+                            //    success: function(tj) {
+                            //
+                            //    },
+                            //    error: function(gameScore, error) {
+                            //
+                            //    }
+                            //});
+                        }
+                    }
+                },
+                error: function(error) {
+                    //alert("查询失败: " + error.code + " " + error.message);
+                }
+            });
             var nameinput=document.getElementById("nameinput");
             nameinput.value=name;
             var ph=document.getElementById("numberinput");
@@ -158,17 +196,107 @@ function phonechange(){
 }
 
 function tongji(){
-    var TJ = Bmob.Object.extend("users");
-    var tj = new TJ();
-    tj.set("name", localStorage.getItem("name"));
-    tj.set("phone",localStorage.getItem("userphone"));
-    tj.set("location",localStorage.getItem("dongxi")+localStorage.getItem("louhao")+"号楼");
-    tj.save(null, {
-        success: function(tj) {
 
+
+//    var CZ = Bmob.Object.extend("users");
+//    var query = new Bmob.Query(CZ);
+//// 查询所有数据
+//    query.find({
+//        success: function(results) {
+//
+//            for (var i = 0; i < results.length; i++) {
+//                var object = results[i];
+//                 if(results[i].get('name')==localStorage.getItem('name')){
+//                     sessionStorage.setItem("shifoushangchuan","t");
+//                     var id=results[i].id;
+//                     sessionStorage.setItem("scid",id);
+//                     break;
+//                     //shangchuan();
+//                 }else{
+//                     sessionStorage.setItem("shifoushangchuan","f");
+//                     //var TJ = Bmob.Object.extend("users");
+//                     //var tj = new TJ();
+//                     //tj.set("name", localStorage.getItem("name"));
+//                     //tj.set("phone",localStorage.getItem("userphone"));
+//                     //tj.set("location",localStorage.getItem("dongxi")+localStorage.getItem("louhao")+"号楼");
+//                     //tj.save(null, {
+//                     //    success: function(tj) {
+//                     //
+//                     //    },
+//                     //    error: function(gameScore, error) {
+//                     //
+//                     //    }
+//                     //});
+//                 }
+//            }
+//        },
+//        error: function(error) {
+//            //alert("查询失败: " + error.code + " " + error.message);
+//        }
+//    });
+
+    if(sessionStorage.getItem("shifoushangchuan")=="t"){
+        shangchuan();
+    }
+    if(sessionStorage.getItem("shifoushangchuan")=="f"){
+        var TJ = Bmob.Object.extend("users");
+        var tj = new TJ();
+        tj.set("name", localStorage.getItem("name"));
+        tj.set("phone",localStorage.getItem("userphone"));
+        tj.set("location",localStorage.getItem("dongxi")+localStorage.getItem("louhao")+"号楼");
+        tj.save(null, {
+            success: function(tj) {
+
+                sessionStorage.setItem("scid",tj.id);
+                sessionStorage.setItem("shifoushangchuan","t");
+             alert("数据同步成功1");
+            },
+            error: function(gameScore, error) {
+
+            }
+        });
+    }
+
+
+
+
+    //var TJ = Bmob.Object.extend("users");
+    //var tj = new TJ();
+    //tj.set("name", localStorage.getItem("name"));
+    //tj.set("phone",localStorage.getItem("userphone"));
+    //tj.set("location",localStorage.getItem("dongxi")+localStorage.getItem("louhao")+"号楼");
+    //tj.save(null, {
+    //    success: function(tj) {
+    //
+    //    },
+    //    error: function(gameScore, error) {
+    //
+    //    }
+    //});
+}
+
+function shangchuan(){
+    var shangchuan = Bmob.Object.extend("users");
+    var query = new Bmob.Query(shangchuan);
+    var scid=sessionStorage.getItem("scid");
+    query.get(scid, {
+        success: function(sc) {
+            sc.set("phone", localStorage.getItem("userphone"));
+            sc.set("name",localStorage.getItem("name"));
+            sc.set("location",localStorage.getItem("dongxi")+localStorage.getItem("louhao")+"号楼");
+            sc.save();
+            alert("数据同步成功2");
+
+            // The object was retrieved successfully.
         },
-        error: function(gameScore, error) {
+        error: function(object, error) {
 
         }
     });
+}
+
+function queren(){
+    shangchuan();
+    alert("数据同步成功");
+    window.location.href="index.html";
 }
