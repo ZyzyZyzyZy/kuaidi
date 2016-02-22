@@ -37,7 +37,7 @@
             </button>
             <button type="button"  class="btn btn-warning btn-lg" onclick="window.location.href='fuwuxiangqing.html'">
                 <span style="color: white" class="glyphicon glyphicon-info-sign"></span> 服务详情
-            </button>
+            </button><br>
 
             <!--<div class="btn-group btn-block dropup">-->
 
@@ -53,8 +53,10 @@
             <!--</ul>-->
 
             <!--</div>-->
-                <button style="margin-top: 10px" type="button" class="btn btn-success btn-lg btn-block" onclick="check1()">下单:箱柜取货</button>
-                <button style="margin-top: 10px" type="button" class="btn btn-success btn-lg btn-block" onclick="check2()">下单:货架取货</button>
+                <button style="margin-top: 10px" type="button" class="btn btn-info btn-lg" onclick="check1()">
+                    <span style="color: white" class="glyphicon glyphico glyphicon-arrow-down"></span>下单:箱柜取货</button>
+                <button style="margin-top: 10px" type="button" class="btn btn-danger btn-lg " onclick="check2()">
+                    <span style="color: white" class="glyphicon glyphico glyphicon-arrow-down"></span>下单:货架取货</button>
                 <button style="margin-top: 10px" type="button" class="btn btn-success btn-lg btn-block" onclick="check3()">查看:我的订单</button>
 
         </footer>
@@ -63,7 +65,7 @@
     <!-- Footer -->
     <footer id="footer">
         <ul class="copyright">
-            <li style="color: black">公测v4.8</li>
+            <li style="color: black">公测v5.0</li>
             <li style="color: black">© ZY 版权所有,仿冒必究</li>
             <li style="color: black">商务合作及客服联系方式 qq:894403712</li>
         </ul>
@@ -76,11 +78,11 @@
 //        window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
 //        document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 //    }
-//function tiaozhuan(weizhi){
-//    if(weizhi=="1"){
-//        window.location.href="choose.html";
-//    }
-//}
+function tiaozhuan(weizhi){
+    if(weizhi=="1"){
+        window.location.href="choose.html";
+    }
+}
 </script>
 </body>
 </html>
