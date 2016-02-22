@@ -37,8 +37,8 @@ window.onload=
     }
 
 
-function check(a){
-    if(a=="1"){
+function check1(){
+
         var m=localStorage.getItem("louhao");
         if(m==null){
 
@@ -63,7 +63,7 @@ function check(a){
      //        window.location.href="quhuohj.html";
      //    }
      //}
-    }
+
 }
 
 function check2(){
@@ -82,3 +82,4 @@ window.location.href="dingdan.html";
 
 
 }
+
