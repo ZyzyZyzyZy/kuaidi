@@ -7,7 +7,10 @@ window.onload=
 
         //localStorage.clear();
         Bmob.initialize("250ee02b502803ee9c571ed74f36a5de", "bd1b1af6ca8ab8bf686885d2384c3349");
-
+        if(localStorage.getItem("yuedu")==null){
+            alert("第一次进入系统,请先阅读服务详情");
+            window.location.href="fuwuxiangqing.html";
+        }
 
         var GameScore = Bmob.Object.extend("danhao");
         var query = new Bmob.Query(GameScore);
@@ -22,6 +25,15 @@ window.onload=
         });
           songhuo();
 
+
+
+
+
+        //if(localStorage.getItem("yuedu")==null){
+        //    alert("第一次进入系统,请先阅读服务详情");
+        //    window.location.href="fuwuxiangqing.html";
+        //}
+
     }
 
 
@@ -29,8 +41,16 @@ function check(a){
     if(a=="1"){
         var m=localStorage.getItem("louhao");
         if(m==null){
+
+
+
+
+
+
+
             alert("请先输入用户信息");
             window.location.href="choose.html";
+
         }else{
             window.location.href="quhuoxg.html";
         }
