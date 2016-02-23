@@ -39,20 +39,18 @@ window.onload=
 
 function check1(){
 
-        var m=localStorage.getItem("louhao");
-        if(m==null){
+        if(localStorage.getItem("yuedu")=="t") {
+            var m = localStorage.getItem("louhao");
+            if (m == null) {
+                alert("请先输入用户信息");
+                window.location.href = "choose.html";
 
-
-
-
-
-
-
-            alert("请先输入用户信息");
-            window.location.href="choose.html";
-
+            } else {
+                window.location.href = "quhuoxg.html";
+            }
         }else{
-            window.location.href="quhuoxg.html";
+            alert("请先阅读并同意服务详情");
+            window.location.href="fuwuxiangqing.html";
         }
      //if(a=="2"){
      //    var n=localStorage.getItem("linkurl");
@@ -66,16 +64,20 @@ function check1(){
 
 }
 
-function check2(){
-    var n=localStorage.getItem("linkurl");
-    if(n==null){
-        alert("请先上传校园卡");
-        window.location.href="shangchuan.html";
+function check2() {
+    if (localStorage.getItem("yuedu") == "t") {
+        var n = localStorage.getItem("linkurl");
+        if (n == null) {
+            alert("请先上传校园卡");
+            window.location.href = "shangchuan.html";
+        } else {
+            window.location.href = "quhuohj.html";
+        }
     }else{
-        window.location.href="quhuohj.html";
+        alert("请先阅读并同意服务详情");
+        window.location.href="fuwuxiangqing.html";
     }
 }
-
 function check3(){
 
 window.location.href="dingdan.html";
