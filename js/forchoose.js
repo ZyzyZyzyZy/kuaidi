@@ -198,42 +198,7 @@ function phonechange(){
 function tongji(){
 
 
-//    var CZ = Bmob.Object.extend("users");
-//    var query = new Bmob.Query(CZ);
-//// 查询所有数据
-//    query.find({
-//        success: function(results) {
-//
-//            for (var i = 0; i < results.length; i++) {
-//                var object = results[i];
-//                 if(results[i].get('name')==localStorage.getItem('name')){
-//                     sessionStorage.setItem("shifoushangchuan","t");
-//                     var id=results[i].id;
-//                     sessionStorage.setItem("scid",id);
-//                     break;
-//                     //shangchuan();
-//                 }else{
-//                     sessionStorage.setItem("shifoushangchuan","f");
-//                     //var TJ = Bmob.Object.extend("users");
-//                     //var tj = new TJ();
-//                     //tj.set("name", localStorage.getItem("name"));
-//                     //tj.set("phone",localStorage.getItem("userphone"));
-//                     //tj.set("location",localStorage.getItem("dongxi")+localStorage.getItem("louhao")+"号楼");
-//                     //tj.save(null, {
-//                     //    success: function(tj) {
-//                     //
-//                     //    },
-//                     //    error: function(gameScore, error) {
-//                     //
-//                     //    }
-//                     //});
-//                 }
-//            }
-//        },
-//        error: function(error) {
-//            //alert("查询失败: " + error.code + " " + error.message);
-//        }
-//    });
+
 
     if(sessionStorage.getItem("shifoushangchuan")=="t"){
         shangchuan();

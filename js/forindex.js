@@ -66,17 +66,28 @@ function check1(){
 
 function check2() {
     if (localStorage.getItem("yuedu") == "t") {
-        var n = localStorage.getItem("linkurl");
-        if (n == null) {
-            alert("请先上传校园卡");
-            window.location.href = "shangchuan.html";
+        var m = localStorage.getItem("louhao");
+        if (m == null) {
+            alert("请完善用户信息");
+            window.location.href = "choose.html";
+
         } else {
-            window.location.href = "quhuohj.html";
+
+            var n = localStorage.getItem("linkurl");
+            if (n == null) {
+                alert("请先上传校园卡");
+                window.location.href = "shangchuan.html";
+            } else {
+                window.location.href = "quhuohj.html";
+            }
         }
-    }else{
-        alert("请先阅读并同意服务详情");
-        window.location.href="fuwuxiangqing.html";
     }
+    else
+        {
+            alert("请先阅读并同意服务详情");
+            window.location.href = "fuwuxiangqing.html";
+        }
+
 }
 function check3(){
 
