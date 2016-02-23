@@ -67,8 +67,8 @@
       <file leaf-file-name="forindex.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/forindex.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6181818">
-              <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.5090909">
+              <caret line="77" column="30" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -136,8 +136,8 @@
         <option value="$PROJECT_DIR$/fuwuxiangqing.html" />
         <option value="$PROJECT_DIR$/js/songhuoyuan.js" />
         <option value="$PROJECT_DIR$/js/forchoose.js" />
-        <option value="$PROJECT_DIR$/js/forindex.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/forindex.js" />
       </list>
     </option>
   </component>
@@ -825,8 +825,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/forindex.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6181818">
-          <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.5090909">
+          <caret line="77" column="30" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
           <folding />
         </state>
       </provider>
