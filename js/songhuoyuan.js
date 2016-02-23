@@ -14,17 +14,22 @@ var shyid;
 
 songhuo();
 function songhuo(){
-    //if(dongxi=="河西"){
-    //    shy="张越";
-    //    shyphone="18149763032";
-    //    shyid="ZhangYue"
-    //}
-    //if(dongxi=="河东"){
-    //    if(louhao==12){
-    //        shy="张越";
-    //        shyphone="18149763032";
-    //        shyid="ZhangYue"
-    //    }
+    if(dongxi=="河西"){
+        shy="张越";
+        shyphone="18149763032";
+        shyid="ZhangYue"
+    }
+    if(dongxi=="河东") {
+        if (louhao == 12) {
+            shy = "张越";
+            shyphone = "18149763032";
+            shyid = "ZhangYue"
+        }else{
+            shy="李显超";
+            shyphone="15026505573";
+            shyid="LiXianChao";
+        }
+    }
     //    if(louhao<21 && louhao>12){
     //        shy="秦盼吉";
     //        shyphone="18217400015";
@@ -41,9 +46,9 @@ function songhuo(){
     //        shyid="DongJing";
     //    }
     //}
-        shy="张越";
-        shyphone="18149763032";
-        shyid="ZhangYue";
+    //    shy="张越";
+    //    shyphone="18149763032";
+    //    shyid="ZhangYue";
 
     localStorage.setItem("shy",shy);
     localStorage.setItem("shyid",shyid);
