@@ -75,8 +75,24 @@ function check2() {
 
             var n = localStorage.getItem("linkurl");
             if (n == null) {
-                alert("请先上传校园卡");
-                window.location.href = "shangchuan.html";
+
+                if(confirm("检测到你没有上传校园卡,如果不上传的话请把快递短信复制到备注中哦.请问你现在准备上传吗?"))
+
+                {
+
+                    window.location.href="shangchuan.html";
+
+                }
+
+                else
+
+                {
+
+                 window.location.href="quhuohj.html";
+
+                }
+
+
             } else {
                 window.location.href = "quhuohj.html";
             }
