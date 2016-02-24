@@ -82,7 +82,7 @@ function nr(){
         +localStorage.getItem("quhuohao")+"   "+"备注:"+localStorage.getItem("beizhu")+"   "+"注:订单将以短信方式发送至订单处" +
         "理中心,实际发送内容与订单有所不同"
     var neirongchucun="单号:"+localStorage.getItem("danhao")+";"+"货架;"+"用户:"+localStorage.getItem("name")+";"+"用户联系方式:"+localStorage.getItem("userphone")+";"+localStorage.getItem("dongxi")+
-        localStorage.getItem("louhao")+"号楼;"+"取货号:"+ localStorage.getItem("quhuohao")+";"+"校园卡"+localStorage.getItem("linkurl")+";"+"备注:"+localStorage.getItem("beizhu");
+        localStorage.getItem("louhao")+"号楼;"+"取货号:"+ localStorage.getItem("quhuohao")+";"+"备注:"+localStorage.getItem("beizhu")+";校园卡"+localStorage.getItem("linkurl");
     l3.innerHTML=neirong;
 
     localStorage.setItem("neirong",neirongchucun);
