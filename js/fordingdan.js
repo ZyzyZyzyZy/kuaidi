@@ -6,6 +6,9 @@ window.onload=
         Bmob.initialize("250ee02b502803ee9c571ed74f36a5de", "bd1b1af6ca8ab8bf686885d2384c3349");
         var y1=document.getElementById("qrdd");
         var y2=document.getElementById("qxdd");
+        var y3=document.getElementById("ccdd");
+        y3.style.visibility="hidden";
+
         y1.style.visibility="hidden";
         y2.style.visibility="hidden";
         sessionStorage.clear();
@@ -76,11 +79,15 @@ var l=parseInt(sessionStorage.getItem('length'));
     if(truenumber==0){
         var y1=document.getElementById("qrdd");
         var y2=document.getElementById("qxdd");
+        var y3=document.getElementById("ccdd");
+        y3.style.visibility="hidden";
         y1.style.visibility="hidden";
         y2.style.visibility="hidden";
     }else{
         var y1=document.getElementById("qrdd");
         var y2=document.getElementById("qxdd");
+        var y3=document.getElementById("ccdd");
+        y3.style.visibility="visible";
         y1.style.visibility="visible";
         y2.style.visibility="visible";
     }
@@ -206,6 +213,62 @@ function  quxiao(){
 
     }
 }
+
+
+
+function  cuicudingdan(){
+    if (confirm("你确定催促送货吗？")) {
+
+        var l=parseInt(sessionStorage.getItem('length'));
+        for(b=1;b<=l;b++){
+            var i3="nrxuanze"+ b.toString();
+            if(sessionStorage.getItem(i3)=="true"){
+                var i4="nrid"+ b.toString();
+                var neirongid=sessionStorage.getItem(i4);
+                var i5="nrdh"+ b.toString();
+                var danhao2=sessionStorage.getItem(i5);
+
+
+                                var shyphone2=localStorage.getItem("shyphone");
+                                var userphone=localStorage.getItem("userphone");
+                                var fsnr="催促送货通知    单号为:"+danhao2+"的订单被"+userphone+"催单,请尽快送达或与用户取得联系";
+                                localStorage.setItem("neirong",fsnr);
+
+
+                                Bmob.Sms.requestSms({"mobilePhoneNumber":shyphone2,"content": fsnr} ).then(function(obj) {
+                                    alert("订单催促成功"); //
+                                    window.location.href="dingdan.html";
+                                }, function(err){
+                                    localStorage.setItem("fsmoshi","quxiao");
+                                    alert("订单催促信息未成功通知送货员,即将改为手动发送");
+                                    window.location.href="fsdingdan1.html";
+                                });
+
+                                //fasongxinxi(danhao2);
+
+
+                //
+
+
+
+
+
+            }
+        }
+
+
+
+
+
+    }
+    else {
+
+    }
+}
+
+
+
+
 function fanhui(){
     window.location.href="index.html";
 }

@@ -7,9 +7,12 @@ window.onload=
 
         //localStorage.clear();
         Bmob.initialize("250ee02b502803ee9c571ed74f36a5de", "bd1b1af6ca8ab8bf686885d2384c3349");
-        if(localStorage.getItem("gengxin")==null){
-            alert("更新公告:取消强制上传校园卡,但是如果不上传的话,选择货架取货时请将短信内容复制到备注中.建议上传.再次强调,公测期间一律免费!");
-            localStorage.setItem("gengxin","t");
+        if(localStorage.getItem("gx6.1")==null){
+            alert("更新公告:\n v6.2:\n" +
+                "在查看我的订单中增加了催促订单功能." +
+                "\n v6.1\n取消强制上传校园卡,但是如果不上传的话,选择货架取货时请将短信内容复制到备注中.建议上传." +
+                "\n再次强调,公测期间一律免费!");
+            localStorage.setItem("gx6.1","t");
         }
         if(localStorage.getItem("yuedu")==null){
             alert("第一次进入系统,请先阅读服务详情");
