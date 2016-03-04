@@ -15,20 +15,22 @@
     <script src="js/bmob/bmob-min.js"></script>
     <script src="js/bmob/bmob.js"></script>
     <script src="js/sc/jquery.form.js"></script>
-    <script src="js/sc/embed.js"></script>
+    <!--<script src="js/sc/embed.js"></script>-->
+    <script src="js/scbybmob.js"></script>
 </head>
 <body  style="background-image: url('img/bg.jpg')">
 <div class="container">
 <h3>上传您的校园卡</h3>
     <br>
-    <form enctype="multipart/form-data" method="post" action="http://up.tietuku.com/" id = "upform">
-        <input name="Token" id = "token" value="3102f8f986996840685429c9d215b9726fc2859a:QmQ1MlJIdTdsSVNKTkQ3NzdlZ1BrVzFfano4PQ==:eyJkZWFkbGluZSI6MTQ1NTc4ODIwNywiYWN0aW9uIjoiZ2V0IiwidWlkIjoiNTU3MDA4IiwiYWlkIjoiMTIwMDkxNCIsImZyb20iOiJmaWxlIn0=" type="hidden">
-        <input type="file" name="file" id = "file" class = "up-file" style="font-size: 10px;margin-top: 10px">
+    <!--<form enctype="multipart/form-data" method="post" action="http://up.tietuku.com/" id = "upform">-->
+        <!--<input name="Token" id = "token" value="3102f8f986996840685429c9d215b9726fc2859a:QmQ1MlJIdTdsSVNKTkQ3NzdlZ1BrVzFfano4PQ==:eyJkZWFkbGluZSI6MTQ1NTc4ODIwNywiYWN0aW9uIjoiZ2V0IiwidWlkIjoiNTU3MDA4IiwiYWlkIjoiMTIwMDkxNCIsImZyb20iOiJmaWxlIn0=" type="hidden">-->
+        <!--<input type="file" name="file" id = "file" class = "up-file" style="font-size: 10px;margin-top: 10px">-->
+        <input type="file" id="profilePhotoFileUpload"  >
         <input onclick="dianji()" type="submit" id = 'btn' value = "开始上传" style="margin-top: 10px" class = "btn btn-info btn-block">
         <img style="margin-top: 20px" class="img-responsive center-block" src="" id="imgs">
 
 
-    </form>
+    <!--</form>-->
     <button onclick="tiaozhuan()" style="margin-top: 20px" id="queren" class="btn btn-info btn-block">确认</button>
     <h2 style="color:red; align-items: center;" id="tishi">上传中</h2>
 </div>
