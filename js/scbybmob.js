@@ -10,7 +10,36 @@ window.onload=
             var y1=document.getElementById("queren");
             y1.style.visibility="hidden";
             sessionStorage.setItem("shifoushangchuan2","f");
+            var CZ1 = Bmob.Object.extend("linkurl");
+            var query1 = new Bmob.Query(CZ1);
+            query1.find({
+                success: function(results) {
 
+                    for (var i = 0; i < results.length; i++) {
+                        var object = results[i];
+                        if(results[i].get('name')==localStorage.getItem('name')){
+                            sessionStorage.setItem("shifoushangchuan2","t");
+                            var id=results[i].id;
+                            var geturl=results[i].get("linkurl");
+                            sessionStorage.setItem("scid2",id);
+                            localStorage.setItem("linkurl",geturl);
+                            var tu=document.getElementById("imgs");
+                            tu.src=geturl;
+                            var y1=document.getElementById("queren");
+                            y1.style.visibility="visible";
+                            sessionStorage.setItem("shifoushangchuan2","t");
+                            break;
+                            //shangchuan();
+                        }else{
+                            sessionStorage.setItem("shifoushangchuan2","f");
+
+                        }
+                    }
+                },
+                error: function(error) {
+                    //alert("查询失败: " + error.code + " " + error.message);
+                }
+            });
         }else{
             var tu=document.getElementById("imgs");
             tu.src=url2;
@@ -30,7 +59,9 @@ window.onload=
                         if(results[i].get('name')==localStorage.getItem('name')){
                             sessionStorage.setItem("shifoushangchuan2","t");
                             var id=results[i].id;
+                            var geturl=results[i].get("linkurl");
                             sessionStorage.setItem("scid2",id);
+                            localStorage.setItem("linkurl",geturl);
                             break;
                             //shangchuan();
                         }else{
