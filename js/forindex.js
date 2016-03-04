@@ -7,11 +7,11 @@ window.onload=
 
         //localStorage.clear();
         Bmob.initialize("250ee02b502803ee9c571ed74f36a5de", "bd1b1af6ca8ab8bf686885d2384c3349");
-        if(localStorage.getItem("gx6.1")==null){
-            alert("更新公告:\n v6.2:\n" +
-                "在查看我的订单中增加了催促订单功能." +
-                "\n v6.1\n取消强制上传校园卡,但是如果不上传的话,选择货架取货时请将短信内容复制到备注中.建议上传." +
-                "\n再次强调,公测期间一律免费!");
+        if(localStorage.getItem("gx6.5")==null){
+            alert("更新公告:\n v6.5:\n" +
+                "1.解决了无法上传校园卡的bug\n"+
+                    "2.恢复强制上传校园卡"
+                );
             localStorage.setItem("gx6.1","t");
         }
         if(localStorage.getItem("yuedu")==null){
@@ -83,7 +83,7 @@ function check2() {
             var n = localStorage.getItem("linkurl");
             if (n == null) {
 
-                if(confirm("检测到你没有上传校园卡,如果不上传的话请把快递短信复制到备注中哦.请问你现在准备上传吗?"))
+                if(confirm("检测到你没有上传校园卡,请上传"))
 
                 {
 
@@ -95,7 +95,7 @@ function check2() {
 
                 {
 
-                 window.location.href="quhuohj.html";
+                 //window.location.href="quhuohj.html";
 
                 }
 
