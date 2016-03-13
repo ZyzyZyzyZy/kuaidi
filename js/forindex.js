@@ -7,12 +7,12 @@ window.onload=
 
         //localStorage.clear();
         Bmob.initialize("250ee02b502803ee9c571ed74f36a5de", "bd1b1af6ca8ab8bf686885d2384c3349");
-        if(localStorage.getItem("gx6.7")==null){
-            alert("更新公告:\n v6.7:\n" +
-                "1.解决了无法上传校园卡的bug\n"+
-                    "2.恢复强制上传校园卡"
+        if(localStorage.getItem("gx6.8")==null){
+            alert("更新公告:\n v6.8:\n" +
+                "1.在柜台取货中加入了其他快递选择\n"
+
                 );
-            localStorage.setItem("gx6.7","t");
+            localStorage.setItem("gx6.8","t");
         }
         if(localStorage.getItem("yuedu")==null){
             alert("第一次进入系统,请先阅读服务详情");

@@ -266,9 +266,6 @@ function  cuicudingdan(){
     }
 }
 
-
-
-
 function fanhui(){
     window.location.href="index.html";
 }
