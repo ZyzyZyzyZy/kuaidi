@@ -124,8 +124,9 @@ function  scc(){
             localStorage.setItem("linkurl",a);
             var ts=document.getElementById("tishi");
             ts.style.visibility="hidden";
-            var tu=document.getElementById("imgs");
-            tu.src=url;
+            //var tu=document.getElementById("imgs");
+            //tu.src=url;
+            alert("上传成功");
             var y1=document.getElementById("queren");
             y1.style.visibility="visible";
 

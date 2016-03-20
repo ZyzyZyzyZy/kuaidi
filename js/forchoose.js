@@ -1,15 +1,5 @@
 window.onload=
     function(){
-        //var y1=document.getElementById("h1");
-        //var y2=document.getElementById("p1");
-        //var y3=document.getElementById("p2");
-        //var y4=document.getElementById("lh");
-        //var y5=document.getElementById("qr");
-        //y1.style.visibility="hidden";
-        //y2.style.visibility="hidden";
-        //y3.style.visibility="hidden";
-        //y4.style.visibility="hidden";
-        //y5.style.visibility="hidden";
         Bmob.initialize("250ee02b502803ee9c571ed74f36a5de", "bd1b1af6ca8ab8bf686885d2384c3349");
         try{
         var louhao=localStorage.getItem("louhao");
