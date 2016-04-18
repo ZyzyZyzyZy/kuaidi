@@ -48,19 +48,7 @@ window.onload=
                             //shangchuan();
                         }else{
                             sessionStorage.setItem("shifoushangchuan","f");
-                            //var TJ = Bmob.Object.extend("users");
-                            //var tj = new TJ();
-                            //tj.set("name", localStorage.getItem("name"));
-                            //tj.set("phone",localStorage.getItem("userphone"));
-                            //tj.set("location",localStorage.getItem("dongxi")+localStorage.getItem("louhao")+"号楼");
-                            //tj.save(null, {
-                            //    success: function(tj) {
-                            //
-                            //    },
-                            //    error: function(gameScore, error) {
-                            //
-                            //    }
-                            //});
+
                         }
                     }
                 },
@@ -252,19 +240,7 @@ function tongji(){
 
 
 
-    //var TJ = Bmob.Object.extend("users");
-    //var tj = new TJ();
-    //tj.set("name", localStorage.getItem("name"));
-    //tj.set("phone",localStorage.getItem("userphone"));
-    //tj.set("location",localStorage.getItem("dongxi")+localStorage.getItem("louhao")+"号楼");
-    //tj.save(null, {
-    //    success: function(tj) {
-    //
-    //    },
-    //    error: function(gameScore, error) {
-    //
-    //    }
-    //});
+
 }
 
 function shangchuan(){

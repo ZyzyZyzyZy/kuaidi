@@ -7,12 +7,13 @@ window.onload=
 
         //localStorage.clear();
         Bmob.initialize("250ee02b502803ee9c571ed74f36a5de", "bd1b1af6ca8ab8bf686885d2384c3349");
-        if(localStorage.getItem("gx6.8")==null){
-            alert("更新公告:\n v6.8:\n" +
-                "1.在柜台取货中加入了其他快递选择\n"
+        if(localStorage.getItem("gx6.9")==null){
+            alert("更新公告:\n v6.9:\n" +
+                "1.新增快递小哥信息(河西1到6号楼)\n" +
+                "2.老用户在输入个人信息的时候只要输入自己的名字和手机号即可同步其他所有信息"
 
                 );
-            localStorage.setItem("gx6.8","t");
+            localStorage.setItem("gx6.9","t");
         }
         if(localStorage.getItem("yuedu")==null){
             alert("第一次进入系统,请先阅读服务详情");

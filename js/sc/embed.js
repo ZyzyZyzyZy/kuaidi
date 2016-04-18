@@ -71,7 +71,7 @@ window.onload=
 	}
 function dianji() {
 	//判断上传文件的类型
-	filepath = $("#file").val();
+	filepath = $("#profilePhotoFileUpload").val();
 	var extStart = filepath.lastIndexOf(".");
 	var ext = filepath.substring(extStart, filepath.length).toUpperCase();
 	if (ext != ".BMP" && ext != ".PNG" && ext != ".GIF" && ext != ".JPG" && ext != ".JPEG") {
@@ -132,20 +132,7 @@ function tiaozhuan(){
 }
 
 function tongji(){
-	//var TJ = Bmob.Object.extend("linkurl");
-	//var tj = new TJ();
-	//tj.set("name", localStorage.getItem("name"));
-	//tj.set("linkurl", localStorage.getItem("linkurl"));
-	//tj.set("phone",localStorage.getItem("userphone"));
-	//tj.set("location",localStorage.getItem("dongxi")+localStorage.getItem("louhao")+"号楼");
-	//tj.save(null, {
-	//	success: function(tj) {
-    //
-	//	},
-	//	error: function(gameScore, error) {
-    //
-	//	}
-	//});
+
 	if(sessionStorage.getItem("shifoushangchuan2")=="t"){
 		shangchuan();
 	}
