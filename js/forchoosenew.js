@@ -14,6 +14,8 @@ window.onload=
            console.log("本地无数据");
            dongxi="河东";
            louhao=7;
+           //localStorage.setItem("louhao",louhao);
+
 
        }else{
            //var m=document.getElementById("lh");
@@ -23,6 +25,8 @@ window.onload=
            console.log("本地有数据");
 
            jiazai();
+           //jinyong(dongxi);
+
        }
 
         hedongxi(dongxi);
@@ -31,6 +35,7 @@ window.onload=
 function jiazai(){
        document.getElementById("nameinput").value=name;
        document.getElementById("numberinput").value=phone;
+
         console.log(name);
        //var id=document.getElementById("lh");
        //id.selectedIndex=louhao;
@@ -89,8 +94,7 @@ function locationchuli(l) {
     localStorage.setItem("dongxi",dongxi);
     hedongxi(dongxi);
     //jinyong(dongxi);
-    var id=document.getElementById("lh");
-    id.value=louhao;
+
     songhuo();
 }
 
@@ -109,6 +113,7 @@ function hedongxi(d){
     dongxi=d;
     //louhaojiazai();
     jinyong(dongxi);
+
 }
 
 function jinyong(i){
@@ -141,9 +146,22 @@ function jinyong(i){
 
     }
 
-    var m=document.getElementById("lh");
-    var nownumber=louhao-1;
-    m.selectedIndex=nownumber;
+    //var m=document.getElementById("lh");
+    //var nownumber=louhao-1;
+    //m.selectedIndex=nownumber;
+    if(dongxi=="河西"){
+
+        var m=document.getElementById("lh");
+        var nownumber=louhao-1;
+        m.selectedIndex=nownumber;
+
+    }
+     else if(dongxi=="河东"){
+        var m=document.getElementById("lh");
+        var nownumber=louhao-7;
+        m.selectedIndex=nownumber;
+
+    }
 }
 function xuanze(){
     var id=document.getElementById("lh");
@@ -175,6 +193,7 @@ function shangchuan(){
                     sc.set("location", localStorage.getItem("dongxi") + localStorage.getItem("louhao") + "号楼");
                     sc.save();
                     alert("数据同步成功");
+                    window.location.href="index.html";
 
                 },
                 error: function (object, error) {
@@ -194,6 +213,58 @@ function shangchuan(){
                     sessionStorage.setItem("scid",tj.id);
                     sessionStorage.setItem("shifoushangchuan","t");
                     alert("数据同步成功");
+                    window.location.href="index.html";
+
+                },
+                error: function(gameScore, error) {
+
+                }
+            });
+        }
+    }
+}
+
+function tiaozhuan(){
+    localStorage.setItem("dongxi",dongxi);
+    name=document.getElementById("nameinput").value;
+    phone=document.getElementById("numberinput").value;
+    if(phone=="" || phone==null || name=="" ||name==null || name==undefined ||phone==undefined){
+        alert("请完善信息");
+    }else {
+
+        localStorage.setItem("name", name);
+        localStorage.setItem("userphone", phone);
+        if (sessionStorage.getItem("shifoushangchuan") == "t") {
+            var shangchuan = Bmob.Object.extend("users");
+            var query = new Bmob.Query(shangchuan);
+            var scid = sessionStorage.getItem("scid");
+
+            query.get(scid, {
+                success: function (sc) {
+                    sc.set("phone", localStorage.getItem("userphone"));
+                    sc.set("name", localStorage.getItem("name"));
+                    sc.set("location", localStorage.getItem("dongxi") + localStorage.getItem("louhao") + "号楼");
+                    sc.save();
+                    window.location.href="shangchuan.html";
+
+                },
+                error: function (object, error) {
+
+                }
+            });
+
+        } else {
+            var TJ = Bmob.Object.extend("users");
+            var tj = new TJ();
+            tj.set("name", localStorage.getItem("name"));
+            tj.set("phone",localStorage.getItem("userphone"));
+            tj.set("location",localStorage.getItem("dongxi")+localStorage.getItem("louhao")+"号楼");
+            tj.save(null, {
+                success: function(tj) {
+                    localStorage.setItem("yhid",tj.id);
+                    sessionStorage.setItem("scid",tj.id);
+                    sessionStorage.setItem("shifoushangchuan","t");
+                    window.location.href="shangchuan.html";
                 },
                 error: function(gameScore, error) {
 

@@ -7,13 +7,13 @@ window.onload=
 
         //localStorage.clear();
         Bmob.initialize("250ee02b502803ee9c571ed74f36a5de", "bd1b1af6ca8ab8bf686885d2384c3349");
-        if(localStorage.getItem("gx6.9")==null){
-            alert("更新公告:\n v6.9:\n" +
-                "1.新增快递小哥信息(河西1到6号楼)\n" +
-                "2.老用户在输入个人信息的时候只要输入自己的名字和手机号即可同步其他所有信息"
+        if(localStorage.getItem("gx7.1")==null){
+            alert("更新公告:\n v7.1:\n" +
+                "1.修改了信息上传逻辑,修补了直接按返回首页信息不保存的bug\n"
+
 
                 );
-            localStorage.setItem("gx6.9","t");
+            localStorage.setItem("gx7.1","t");
         }
         if(localStorage.getItem("yuedu")==null){
             alert("第一次进入系统,请先阅读服务详情");
@@ -49,7 +49,9 @@ function check1(){
 
         if(localStorage.getItem("yuedu")=="t") {
             var m = localStorage.getItem("louhao");
-            if (m == null) {
+            var n2=localStorage.getItem("name");
+            var n3=localStorage.getItem("yhid");
+            if (m == null || n2==null ||n3==null) {
                 alert("请先输入用户信息");
                 window.location.href = "choose.html";
 
@@ -75,7 +77,9 @@ function check1(){
 function check2() {
     if (localStorage.getItem("yuedu") == "t") {
         var m = localStorage.getItem("louhao");
-        if (m == null) {
+        var n2=localStorage.getItem("name");
+        var n3=localStorage.getItem("yhid");
+        if (m == null || n2==null ||n3==null) {
             alert("请完善用户信息");
             window.location.href = "choose.html";
 
